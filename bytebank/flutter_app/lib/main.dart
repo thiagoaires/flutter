@@ -16,6 +16,9 @@ class ByteBank extends StatelessWidget {
 }
 
 class FormularioTransferencia extends StatelessWidget {
+  final TextEditingController _controllerCampoConta = TextEditingController();
+  final TextEditingController _controllerCampoValor = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +30,13 @@ class FormularioTransferencia extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                controller: _controllerCampoConta,
                 style: TextStyle(
                   fontSize: 24.0
                 ),
                 decoration: InputDecoration(
                   hintText: '0000',
-                  labelText: 'Agencia'
+                  labelText: 'Conta'
                 ),
                 keyboardType: TextInputType.number,
               ),
@@ -40,6 +44,7 @@ class FormularioTransferencia extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                controller: _controllerCampoValor,
                 style: TextStyle(
                   fontSize: 24.0
                 ),
@@ -52,6 +57,14 @@ class FormularioTransferencia extends StatelessWidget {
               ),
             ),
             RaisedButton(
+              onPressed: () {
+                final int conta = int.tryParse(_controllerCampoConta.text);
+                final double valor = double.tryParse(_controllerCampoValor.text);
+                if(conta != null && valor != null){
+                  final transferenciaCriada = Transferencia(conta,valor);
+                  debugPrint('$transferenciaCriada');
+                }
+              },
               child: Text('Confirmar'),
             )
           ],
@@ -80,9 +93,9 @@ class ListaTransferencias extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: <Widget>[
-        ItemTransferencia(Transferencia(200.0, 312)),
-        ItemTransferencia(Transferencia(3000, 123)),
-        ItemTransferencia(Transferencia(10, 8499)),
+//        ItemTransferencia(Transferencia(200.0, 312)),
+//        ItemTransferencia(Transferencia(3000, 123)),
+//        ItemTransferencia(Transferencia(10, 8499)),
       ]),
     );
   }
@@ -99,14 +112,19 @@ class ItemTransferencia extends StatelessWidget {
         child: ListTile(
       leading: Icon(Icons.monetization_on),
       title: Text(_transferencia.valor.toString()),
-      subtitle: Text(_transferencia.agencia.toString()),
+      subtitle: Text(_transferencia.conta.toString()),
     ));
   }
 }
 
 class Transferencia {
   final double valor;
-  final int agencia;
+  final int conta;
 
-  Transferencia(this.valor, this.agencia);
+  Transferencia(this.conta, this.valor );
+
+  @override
+  String toString() {
+    return 'Transferencia: valor: ${this.valor} conta: ${this.conta}';
+  }
 }
