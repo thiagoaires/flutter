@@ -28,8 +28,8 @@ class HomeWidget extends StatelessWidget {
         width: 300,
         height: 300, 
         color: Colors.blueGrey,
-        child: Text('Texto daor adisohd aodsidhsaiha adsodhas adhsoiha', textAlign: TextAlign.justify, style: TextStyle(color: Colors.cyan, fontSize: 18.0, fontWeight: FontWeight.bold)),
-      ),
+        child: Icon(Icons.account_balance, color: Colors.deepOrangeAccent)
+        ),
     );
   }
 }
