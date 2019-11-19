@@ -4,7 +4,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  @override
+  @override 
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
@@ -12,24 +12,50 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
-        body: HomeWidget(),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              width: double.maxFinite,
+              color: Colors.yellow,
+              height: 39,
+            ),
+            Container(
+              color: Colors.red,
+              width: double.maxFinite,
+              height: 60,),
+            ButtonCard(),
+            TextButton()  
+          ]
+        ),
       ),
     );
   }
 }
 
-class HomeWidget extends StatelessWidget {
+class ButtonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(80),
-        width: 300,
-        height: 300, 
-        color: Colors.blueGrey,
-        child: Icon(Icons.account_balance, color: Colors.deepOrangeAccent)
-        ),
+    return Container(
+      width: 300,
+      height: 111,
+      color: Colors.blue,
+      child: Icon(Icons.add, color: Colors.white,),
+
+    );
+  }
+}
+
+
+class TextButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 100,
+      alignment: Alignment.center,
+      color: Colors.greenAccent,
+      child: Text('Parmera sem mundial', style: TextStyle(color: Colors.lightGreen),)
     );
   }
 }
