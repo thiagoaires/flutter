@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: double.maxFinite,
+              width: 200,
               color: Colors.yellow,
               height: 39,
             ),
