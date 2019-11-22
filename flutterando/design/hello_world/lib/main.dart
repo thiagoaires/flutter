@@ -54,8 +54,15 @@ class ButtonRowIcon extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(Icons.add, color: Colors.white, size: 40,),
-              Text('Text', style: TextStyle(color: Colors.white, fontSize: 40),)
+              Expanded(
+                flex: 1,
+                
+                child: Icon(Icons.add, color: Colors.white, size: 40,)
+              ),
+              Expanded(
+                flex: 4,
+                child: Text('Text', style: TextStyle(color: Colors.white, fontSize: 40, ), textAlign: TextAlign.center,)
+              )
             ],
           ),
         ),
