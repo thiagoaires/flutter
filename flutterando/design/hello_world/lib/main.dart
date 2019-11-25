@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/button-row-icon.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
               ButtonCard(),
               Container(height: 50,),
               TextButton(),
-              ButtonRowIcon(),
+              ButtonRowIcon(color: Colors.yellow, text: "Botao", icon: Icons.add_alarm),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class ButtonRowIcon extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -69,7 +70,7 @@ class ButtonRowIcon extends StatelessWidget {
       ),
     );
   }
-}
+
 
 class ButtonCard extends StatelessWidget {
   @override
