@@ -4,3 +4,5 @@ evaluate(new File(                                                      // new
         settingsDir.parentFile,                                               // new
         'android_flutter_mobile/.android/include_flutter.groovy'                          // new
 ))
+// Generated file. Do not edit.
+include ':.android'
