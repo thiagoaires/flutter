@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -45,6 +46,24 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<Null> _refresh() async{
+    await Future.delayed(Duration(seconds: 1));
+
+    setState(() {
+      _todoList.sort((a, b) {
+        if(a["ok"] && !b["ok"]){
+          return 1;
+        } else if(!a["ok"] && b["ok"]){
+          return -1;
+        } else{
+          return 0;
+        }
+      });
+    });
+
+    _saveFile();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -80,10 +99,13 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                padding: EdgeInsets.only(top: 10),
-                itemCount: _todoList.length,
-                itemBuilder: buildItem,
+              child: RefreshIndicator(
+                onRefresh: _refresh,
+                child: ListView.builder(
+                  padding: EdgeInsets.only(top: 10),
+                  itemCount: _todoList.length,
+                  itemBuilder: buildItem,
+                ),
               ),
             )
           ],
@@ -94,7 +116,7 @@ class _MyAppState extends State<MyApp> {
 
   Widget buildItem(context, index){
     return Dismissible(
-      key: Key(index.toString()),
+      key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
       direction: DismissDirection.startToEnd,
       background: Container(
         color: Colors.red,
@@ -109,8 +131,9 @@ class _MyAppState extends State<MyApp> {
           _lastTodo = _todoList[index];
           _todoList.removeAt(index);
 
-          final snack = SnackBar(
-            content: Text("Tarefa ${_lastTodo["title"]} removida"),
+        });
+        final snack = SnackBar(
+            content: Text("Tarefa  removida"),
             action: SnackBarAction(
               label: "Desfazer",
               onPressed: (){
@@ -123,8 +146,6 @@ class _MyAppState extends State<MyApp> {
           );
           Scaffold.of(context).removeCurrentSnackBar();
           Scaffold.of(context).showSnackBar(snack);
-        });
-        print(_lastTodo);
         _saveFile();
       },
       child: CheckboxListTile(
