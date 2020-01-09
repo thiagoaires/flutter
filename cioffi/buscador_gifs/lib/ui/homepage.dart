@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'dart:async';
 
+import 'package:buscador_gifs/ui/gif_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:share/share.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,9 +20,9 @@ class _HomePageState extends State<HomePage> {
     http.Response response;
 
     if(_search == null || _search.isEmpty){
-      response = await http.get("https://api.giphy.com/v1/gifs/trending?api_key=xeeaGzl9WpwVG3YQ1AvtuxUs3lmDAYFj&limit=20&rating=G");
+      response = await http.get("https://api.giphy.com/v1/gifs/trending?api_key=xeeaGzl9WpwVG3YQ1AvtuxUs3lmDAYFj&limit=19&rating=G");
     } else{
-      response = await http.get("https://api.giphy.com/v1/gifs/search?api_key=xeeaGzl9WpwVG3YQ1AvtuxUs3lmDAYFj&q=$_search&limit=25&offset=$_offset&rating=G&lang=en");
+      response = await http.get("https://api.giphy.com/v1/gifs/search?api_key=xeeaGzl9WpwVG3YQ1AvtuxUs3lmDAYFj&q=$_search&limit=19&offset=$_offset&rating=G&lang=en");
     }
 
     return json.decode(response.body);
@@ -51,6 +53,13 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 18),
             child: TextField(
+              onSubmitted: (text){
+                print(text);
+                setState(() {
+                  _search = text;
+                  _offset = 0;
+                });
+              },
               textAlign: TextAlign.center,
               decoration: InputDecoration(
                 labelText: "Pesquise Aqui",
@@ -91,21 +100,45 @@ class _HomePageState extends State<HomePage> {
 
 
   }
+  int _getCount(List _data){
+    if(_search == null)
+      return _data.length;
+    else
+      return _data.length + 1;
+  }
 
   Widget _createGifTable(BuildContext context, AsyncSnapshot snapshot){
     return GridView.builder(
       padding: EdgeInsets.all(8),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 10, mainAxisSpacing: 10), 
       itemBuilder: (BuildContext context, int index) {
-        return GestureDetector(
-          child: Image.network(
-            snapshot.data["data"][index]["images"]["fixed_height"]["url"],
-            height: 300,
-            fit: BoxFit.cover,
-            ),
-        );
+        if(_search == null || index < snapshot.data["data"].length){
+          return GestureDetector(
+            child: Image.network(
+              snapshot.data["data"][index]["images"]["fixed_height"]["url"],
+              height: 300,
+              fit: BoxFit.cover,
+              ),
+              onLongPress: (){
+                Share.share(snapshot.data["data"][index]["images"]["fixed_height"]["url"]);
+              },
+              onTap: (){
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (context) => GifPage(snapshot.data["data"][index])));
+              },
+          );
+        } else{
+          return GestureDetector(
+            onTap: (){
+              setState(() {
+                _offset += 19;
+              });
+            },
+          );
+        }
       },
-      itemCount: snapshot.data["data"].length,
+      itemCount: _getCount(snapshot.data["data"]),
     );
   }
 }
