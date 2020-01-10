@@ -5,6 +5,7 @@ import 'package:buscador_gifs/ui/gif_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:share/share.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -114,11 +115,12 @@ class _HomePageState extends State<HomePage> {
       itemBuilder: (BuildContext context, int index) {
         if(_search == null || index < snapshot.data["data"].length){
           return GestureDetector(
-            child: Image.network(
-              snapshot.data["data"][index]["images"]["fixed_height"]["url"],
+            child: FadeInImage.memoryNetwork(
+              image: snapshot.data["data"][index]["images"]["fixed_height"]["url"],
               height: 300,
-              fit: BoxFit.cover,
-              ),
+              fit: BoxFit.cover, 
+              placeholder: kTransparentImage,
+            ),
               onLongPress: (){
                 Share.share(snapshot.data["data"][index]["images"]["fixed_height"]["url"]);
               },
