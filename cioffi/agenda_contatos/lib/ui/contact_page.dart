@@ -12,6 +12,13 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
+
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+
+  bool _userEdited = false;
+
   Contact _editedContact;
 
   @override
@@ -22,6 +29,10 @@ class _ContactPageState extends State<ContactPage> {
       _editedContact = Contact();
     } else {
       _editedContact = Contact.fromMap(widget.contact.toMap());
+
+      _nameController.text = _editedContact.name;
+      _emailController.text = _editedContact.email;
+      _phoneController.text = _editedContact.phone;
     }
   }
 
@@ -41,30 +52,53 @@ class _ContactPageState extends State<ContactPage> {
           backgroundColor: Colors.red,
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              GestureDetector(
-                child: Container(
-                  width: 140,
-                  height: 140,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: _editedContact.img == null
-                              ? AssetImage("assets/images/person.png")
-                              : FileImage(File(_editedContact.img)))),
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  child: Container(
+                    width: 140,
+                    height: 140,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: _editedContact.img == null
+                                ? AssetImage("assets/images/person.png")
+                                : FileImage(File(_editedContact.img)))),
+                  ),
                 ),
-              ),
-              TextField(
-                decoration: InputDecoration(labelText: "Nome"),
-                onChanged: (text){
-                  setState(() {
-                    _editedContact.name = text;
-                  });
-                },
-              )
-            ],
+                TextField(
+                  controller: _nameController,
+                  decoration: InputDecoration(labelText: "Nome"),
+                  onChanged: (text) {
+                    setState(() {
+                      _userEdited = true;
+                      _editedContact.name = text;
+                    });
+                  },
+                ),
+                TextField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(labelText: "E-mail"),
+                  onChanged: (text) {
+                    _userEdited = true;
+                    _editedContact.email = text;
+                  },
+                ),
+                TextField(
+                  controller: _phoneController,
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(labelText: "Telefone"),
+                  onChanged: (text) {
+                    _userEdited = true;
+                    _editedContact.phone = text;
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
