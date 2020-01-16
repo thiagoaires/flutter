@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:agenda_contatos/ui/contact_page.dart';
 import 'package:flutter/material.dart';
 import 'package:agenda_contatos/helpers/contact_helper.dart';
 
@@ -18,25 +19,20 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     // Contact c = Contact();
-    // c.name = "Tiago";
+    // c.name = "Eymael";
     // c.email = "maka@gmail.com";
     // c.phone = "(11) 987117137";
 
     // helper.saveContact(c);
 
-    helper.getAllContacts().then((list) {
-      setState(() {
-        contacts = list;
-      });
-    });
 
+    _getAllContacts();
     helper.getAllContacts().then((list) => print(list));
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text("Contatos"),
@@ -46,7 +42,10 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           backgroundColor: Colors.blueAccent,
-          onPressed: () {},
+          onPressed: () {
+            _showContactPage();
+          }
+          ,
         ),
         body: ListView.builder(
           padding: EdgeInsets.all(10),
@@ -55,8 +54,7 @@ class _HomePageState extends State<HomePage> {
             return _contactCard(context, index);
           },
         ),
-      ),
-    );
+      );
   }
 
   Widget _contactCard(BuildContext context, int index) {
@@ -85,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Text(
                       contacts[index].name ?? "",
-                      textAlign: TextAlign.left, 
+                      textAlign: TextAlign.left,
                       style:
                           TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
@@ -105,6 +103,31 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      onTap: () {
+        _showContactPage(contact: contacts[index]);
+      },
     );
+  }
+
+  void _showContactPage({Contact contact}) async{
+    final recContact = await Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ContactPage(contact: contact,)));
+
+    if (recContact != null){
+      if(contact != null){
+        await helper.updateContact(recContact);
+      } else{
+        await helper.saveContact(recContact);
+      }
+      _getAllContacts();
+    }
+  }
+
+  void _getAllContacts(){
+    helper.getAllContacts().then((list) {
+      setState(() {
+        contacts = list;
+      });
+    });
   }
 }
