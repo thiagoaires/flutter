@@ -1,8 +1,15 @@
+import 'package:fav_youtube/api.dart';
 import 'package:fav_youtube/screens/home.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
+
+  Api api = Api();
+
+  api.search("patati");
+
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: "Fluttertube",
     home: Home(),
   ));
