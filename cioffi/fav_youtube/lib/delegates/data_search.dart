@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class DataSearch extends SearchDelegate<String> {
   @override
@@ -37,5 +40,19 @@ class DataSearch extends SearchDelegate<String> {
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
     return Container();
+  }
+
+  Future<List> suggestions(String search) async{
+    http.Response response = await http.get(
+      "http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&cp=1&q=$search&format=5&alt=json"
+    );
+
+    if(response.statusCode == 200){
+      return json.decode(response.body).map((v){
+        return v[0];
+      }).toList();
+    } else{
+      throw Exception("fail to load suggestion");
+    }
   }
 }
