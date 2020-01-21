@@ -10,8 +10,7 @@ class DataSearch extends SearchDelegate<String> {
       IconButton(
         icon: Icon(Icons.clear),
         onPressed: () {
-            query = "";
-
+          query = "";
         },
       )
     ];
@@ -20,7 +19,7 @@ class DataSearch extends SearchDelegate<String> {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      onPressed: (){
+      onPressed: () {
         close(context, null);
       },
       icon: AnimatedIcon(
@@ -33,25 +32,48 @@ class DataSearch extends SearchDelegate<String> {
   @override
   Widget buildResults(BuildContext context) {
     // TODO: implement buildResults
+    Future.delayed(Duration.zero).then((_) => close(context, query));
     return Container();
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implement buildSuggestions
-    return Container();
+    if (query.isEmpty) {
+      return Container();
+    } else {
+      return FutureBuilder<List>(
+        future: suggestions(query),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return CircularProgressIndicator();
+          } else {
+            return ListView.builder(
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(snapshot.data[index]),
+                  leading: Icon(Icons.play_arrow),
+                  onTap: (){
+                    print(snapshot.data[index]);
+                  },
+                );
+              },
+              itemCount: snapshot.data.length,
+            );
+          }
+        },
+      );
+    }
   }
 
-  Future<List> suggestions(String search) async{
+  Future<List> suggestions(String search) async {
     http.Response response = await http.get(
-      "http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&cp=1&q=$search&format=5&alt=json"
-    );
+        "http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&cp=1&q=$search&format=5&alt=json");
 
-    if(response.statusCode == 200){
-      return json.decode(response.body).map((v){
+    if (response.statusCode == 200) {
+      return json.decode(response.body)[1].map((v) {
         return v[0];
       }).toList();
-    } else{
+    } else {
       throw Exception("fail to load suggestion");
     }
   }
