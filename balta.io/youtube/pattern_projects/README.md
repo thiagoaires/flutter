@@ -1,4 +1,4 @@
-# mobx
+# pattern_projects
 
 A new Flutter project.
 

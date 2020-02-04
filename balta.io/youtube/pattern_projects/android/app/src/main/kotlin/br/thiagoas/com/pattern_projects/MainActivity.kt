@@ -1,4 +1,4 @@
-package br.thiagoas.com.mobx
+package br.thiagoas.com.pattern_projects
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
