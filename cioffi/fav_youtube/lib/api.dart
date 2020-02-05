@@ -1,20 +1,25 @@
 import 'dart:convert';
 
-import "package:http/http.dart" as http;
-import 'model/videos.dart';
+import 'package:fav_youtube/model/videos.dart';
+import 'package:http/http.dart' as http;
 
 const API_KEY = "AIzaSyB4GLZPFSKoPk8Kux2i9-EytN9wmKKCXNY";
 
 class Api{
 
-  search(String search) async{
+  String _search;
+  String _nextToken;
 
-    print(search);
+  Future<List<Videos>> search(String search) async {
+
+    _search = search;
+
     http.Response response = await http.get(
-      "https://www.googleapis.com/youtube/v3/search?part=snippet&q=$search&type=video&key=$API_KEY&maxResults=10"
-      );
+        "https://www.googleapis.com/youtube/v3/search?part=snippet&q=$search&type=video&key=$API_KEY&maxResults=10"
+    );
+    print("show");
+    return decode(response);
 
-      decode(response);
   }
 
   List<Videos> decode(http.Response response){
