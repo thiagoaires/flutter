@@ -16,7 +16,9 @@ class _DetailsWidgetState extends State<DetailsWidget> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(widget.item.name ?? ""),
+      ), 
       body: SingleChildScrollView(
         child: Container(
           width: size.width,

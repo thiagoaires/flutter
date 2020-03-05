@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:github_search/bloc/SearchBloc.dart';
 import 'package:github_search/details/DetailsWidget.dart';
 import 'package:github_search/models/SearchItem.dart';
 import 'package:github_search/models/SearchResult.dart';
@@ -32,43 +32,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<SearchItem> _githubResponse = List<SearchItem>();
-  String text = "";
 
-  Future<void> _search(String text) async {
-    try {
-      Response response = await Dio()
-          .get("https://api.github.com/search/repositories?q=${text}");
+  SearchBloc _searchBloc;
 
-      List<SearchItem> searchedItems =
-          SearchResult.fromJson(response.data).items;
-
-      setState(() {
-        _githubResponse = searchedItems;
-      });
-    } on DioError catch (e) {
-      print(e);
-    }
+  @override
+  void initState(){
+    _searchBloc = new SearchBloc();
+    super.initState();
   }
 
-  Future<void> _timeSearch(String searchText) async {
-    if (searchText != text) {
-      Timer(Duration(milliseconds: 500), () {
-        _search(text);
-      });
-    }
+  @override
+  void dispose(){
+    _searchBloc?.dispose();
+    super.dispose();
   }
 
   Widget _textField() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
-        onChanged: (value) {
-          if (value.length > 2) {
-            _timeSearch(value);
-            text = value;
-          }
-        },
+        onChanged: _searchBloc.searchEvent.add,
         decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: "Digite o nome do repositório",
@@ -108,19 +91,20 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           _textField(),
-          _githubResponse.isNotEmpty
-              ? ListView.builder(
-                  shrinkWrap: true,
-                  physics: ClampingScrollPhysics(),
-                  itemCount: _githubResponse.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    SearchItem item = _githubResponse[index];
-                    return _items(item);
-                  },
-                )
-              : Center(
-                  child: CircularProgressIndicator(),
-                ),
+          StreamBuilder<SearchResult>(
+            stream: _searchBloc.apiResultFlux,
+            builder: (BuildContext context, AsyncSnapshot<SearchResult> snapshot) {
+              return snapshot.hasData ? ListView.builder(
+                shrinkWrap: true,
+                physics: ClampingScrollPhysics(),
+                itemCount: snapshot.data.items.length,
+                itemBuilder: (BuildContext context, int index) {
+                  SearchItem item = snapshot.data.items[index];
+                  return _items(item);
+                },
+              ) : Text("sem dados");
+            }
+          ),
         ],
       ),
     );

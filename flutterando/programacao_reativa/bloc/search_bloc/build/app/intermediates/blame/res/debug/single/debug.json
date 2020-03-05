@@ -1,146 +1,146 @@
 [
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout-v16/notification_template_custom_big.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_action.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout/notification_action.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable/notification_icon_background.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable/notification_bg.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable/notification_tile_bg.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout/notification_template_icon_group.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout/notification_action.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout/notification_template_part_time.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-v21/notification_action_background.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable/notification_bg.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout/notification_template_part_chronometer.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/drawable/launch_background.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout-v21/notification_action.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable/notification_bg_low.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout-v16/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout/notification_action_tombstone.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable/notification_tile_bg.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
+        "source": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/android/app/src/main/res/drawable/launch_background.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "/Users/mac/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/Users/thiago.aires/Documents/flutter/flutterando/programacao_reativa/bloc/search_bloc/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/thiago.aires/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/20908d5d0471ce6e310280bdd971711f/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     }
 ]
