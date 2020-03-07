@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'Address.dart';
+
 part 'Person.g.dart';
 
 @JsonSerializable()
@@ -8,9 +10,9 @@ class Person {
 
   String id;
   String name;
+  List<Address> addresses;
 
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
-  //factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
+  
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
