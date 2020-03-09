@@ -21,6 +21,7 @@ class SearchBloc{
     apiResultFlux = searchFlux
     .distinct()
     .where((valor) => valor.length > 2)
+    .debounceTime(Duration(seconds: 1))
     .asyncMap(_service.search)
     .switchMap((valor) => Stream.value(valor));
   }
