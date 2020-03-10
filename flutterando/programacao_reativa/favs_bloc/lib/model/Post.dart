@@ -18,4 +18,8 @@ class Post{
 
   Map<String, dynamic> toJson() => _$PostToJson(this);
 
+  bool operator ==(other) => other is Post && other.id == id;
+
+  @override
+  int get hashCode => super.hashCode ^ userId.hashCode * title.hashCode ^ body.hashCode;
 }
