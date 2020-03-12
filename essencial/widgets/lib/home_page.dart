@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/pages/hello_listview.dart';
 import 'package:widgets/pages/hello_page1.dart';
 import 'package:widgets/pages/hello_page2.dart';
 import 'package:widgets/pages/hello_page3.dart';
@@ -33,8 +34,8 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               BlueButton(
-                "page 1",
-                onPressed: () => _onClickNavigator(context, HelloPage1()),
+                "page ListView",
+                onPressed: () => _onClickNavigator(context, HelloListView()),
               ),
               BlueButton(
                 "page 2",
@@ -105,6 +106,9 @@ class HomePage extends StatelessWidget {
   }
 
   _img(String path) {
-    return Image.asset("assets/images/$path");
+    return Image.asset(
+      "assets/images/$path",
+      fit: BoxFit.cover,
+    );
   }
 }
