@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/drawer_list.dart';
 import 'package:widgets/pages/hello_listview.dart';
 import 'package:widgets/pages/hello_page2.dart';
 import 'package:widgets/pages/hello_page3.dart';
@@ -10,14 +11,31 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("titulo"),
-      ),
-      drawer: Container(
-        color: Colors.amber,
-      ),
-      body: _body(size),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text("titulo"),
+            bottom: TabBar(
+              tabs: <Widget>[
+                Tab(
+                  text: "Tab1",
+                ),
+                Tab(
+                  text: "Tab2",
+                ),
+              ],
+            ),
+          ),
+          drawer: DrawerList(),
+          body: TabBarView(
+            children: <Widget>[
+              _body(size),
+              Container(
+                color: Colors.deepOrangeAccent,
+              ),
+            ],
+          )),
     );
   }
 
@@ -27,6 +45,9 @@ class HomePage extends StatelessWidget {
       color: Colors.amber,
       child: Column(
         children: <Widget>[
+          SizedBox(
+            height: 16,
+          ),
           _text(),
           _pageView(),
           _buttons(),
@@ -96,7 +117,31 @@ class HomePage extends StatelessWidget {
     ));
   }
 
-  _onClickDialog(BuildContext context) {}
+  _onClickDialog(BuildContext context) {
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      child: WillPopScope(
+        child: AlertDialog(
+          title: Text("Titulo popup"),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text("Cancelar"),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pop(context);
+                print("ok");
+              },
+              child: Text("OK"),
+            ),
+          ],
+        ),
+        onWillPop: () async => false,
+      ),
+    );
+  }
 
   _onClickToast() {}
 
