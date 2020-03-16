@@ -17,11 +17,11 @@ class HomePage extends StatelessWidget {
       drawer: Container(
         color: Colors.amber,
       ),
-      body: _body(size, context),
+      body: _body(size),
     );
   }
 
-  Container _body(Size size, BuildContext context) {
+  Container _body(Size size) {
     return Container(
       height: size.height,
       color: Colors.amber,
@@ -29,43 +29,55 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           _text(),
           _pageView(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              BlueButton(
-                "page ListView",
-                onPressed: () => _onClickNavigator(context, HelloListView()),
-              ),
-              BlueButton(
-                "page 2",
-                onPressed: () => _onClickNavigator(context, HelloPage2()),
-              ),
-              BlueButton(
-                "page 3",
-                onPressed: () => _onClickNavigator(context, HelloPage3()),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              BlueButton(
-                "Snack",
-                onPressed: () => _onClickSnack,
-              ),
-              BlueButton(
-                "DIalog",
-                onPressed: () => _onClickDialog,
-                color: Colors.amberAccent,
-              ),
-              BlueButton(
-                "Toast",
-                onPressed: () => _onClickToast,
-              ),
-            ],
-          ),
+          _buttons(),
         ],
       ),
+    );
+  }
+
+  _buttons() {
+    return Builder(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BlueButton(
+                  "page ListView",
+                  onPressed: () => _onClickNavigator(context, HelloListView()),
+                ),
+                BlueButton(
+                  "page 2",
+                  onPressed: () => _onClickNavigator(context, HelloPage2()),
+                ),
+                BlueButton(
+                  "page 3",
+                  onPressed: () => _onClickNavigator(context, HelloPage3()),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BlueButton(
+                  "Snack",
+                  onPressed: () => _onClickSnack(context),
+                ),
+                BlueButton(
+                  "DIalog",
+                  onPressed: () => _onClickDialog(context),
+                  color: Colors.amberAccent,
+                ),
+                BlueButton(
+                  "Toast",
+                  onPressed: () => _onClickToast,
+                ),
+              ],
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -74,13 +86,21 @@ class HomePage extends StatelessWidget {
     print(">>> $s");
   }
 
-  _onClickSnack() {}
+  _onClickSnack(BuildContext context) {
+    Scaffold.of(context).showSnackBar(SnackBar(
+      content: Text("123"),
+      action: SnackBarAction(
+        onPressed: () => print("Snaclicked"),
+        label: "OK",
+      ),
+    ));
+  }
 
-  _onClickDialog() {}
+  _onClickDialog(BuildContext context) {}
 
   _onClickToast() {}
 
-  Container _pageView() {
+  _pageView() {
     return Container(
       height: 300,
       margin: EdgeInsets.all(8),
