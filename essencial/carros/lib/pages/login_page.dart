@@ -1,5 +1,7 @@
 import 'package:carros/api/login_api.dart';
 import 'package:carros/api/response_api.dart';
+import 'package:carros/model/user.dart';
+import 'package:carros/prefs.dart';
 import 'package:carros/utils/nav.dart';
 import 'package:carros/pages/home_page.dart';
 import 'package:carros/widgets/app_button.dart';
@@ -25,6 +27,14 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
+
+    Future<User> future = User.get();
+    future.then((User user) {
+      if (user != null)
+        setState(() {
+          loginController.text = user.login;
+        });
+    });
   }
 
   @override

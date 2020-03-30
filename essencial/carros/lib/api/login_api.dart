@@ -21,11 +21,12 @@ class LoginAPI {
 
       var response =
           await http.post(urlLogin, body: jsonParams, headers: headers);
-
       Map mapResponse = json.decode(response.body);
 
       if (response.statusCode == 200) {
         final userLogged = User.fromJson(mapResponse);
+        userLogged.save();
+
         return ApiResponse.ok(userLogged);
       } else {
         return ApiResponse.error(mapResponse["error"]);

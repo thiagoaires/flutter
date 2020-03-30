@@ -1,5 +1,7 @@
 import 'package:carros/api/carros_api.dart';
 import 'package:carros/model/car.dart';
+import 'package:carros/pages/car_page.dart';
+import 'package:carros/utils/nav.dart';
 import 'package:flutter/material.dart';
 
 class CarListView extends StatefulWidget {
@@ -13,9 +15,22 @@ class CarListView extends StatefulWidget {
 
 class _CarListViewState extends State<CarListView>
     with AutomaticKeepAliveClientMixin<CarListView> {
+  List<Car> listCarros;
+
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    Future<List<Car>> futureCarros = CarrosApi.getCarros(widget.tipo);
+    futureCarros.then((carros) {
+      setState(() {
+        listCarros = carros;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,21 +39,12 @@ class _CarListViewState extends State<CarListView>
   }
 
   Widget _body() {
-    Future<List<Car>> futureCarros = CarrosApi.getCarros(widget.tipo);
-
-    return FutureBuilder(
-      future: futureCarros,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        List<Car> listCarros = snapshot.data;
-
-        if (!snapshot.hasData) {
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        return _listView(listCarros);
-      },
-    );
+    if (listCarros == null) {
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+    return _listView(listCarros);
   }
 
   ListView _listView(List<Car> listCarros) {
@@ -72,7 +78,9 @@ class _CarListViewState extends State<CarListView>
                       child: ButtonBar(
                         children: <Widget>[
                           FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              push(context, CarPage(carro));
+                            },
                             child: Text("Detalhes"),
                           ),
                           FlatButton(
