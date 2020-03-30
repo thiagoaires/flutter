@@ -11,7 +11,7 @@ class TipoCarro {
 class CarrosApi {
   static Future<List<Car>> getCarros(String tipo) async {
     try {
-      final urlCarros =
+      String urlCarros =
           "http://livrowebservices.com.br/rest/carros/tipo/${tipo}";
       print(tipo);
 
@@ -22,6 +22,7 @@ class CarrosApi {
       return carros;
     } catch (e) {
       print(e);
+      print("erro requisiçao ${tipo}");
     }
   }
 }
