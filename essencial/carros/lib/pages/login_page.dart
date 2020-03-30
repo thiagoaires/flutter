@@ -1,6 +1,6 @@
 import 'package:carros/api/login_api.dart';
 import 'package:carros/api/response_api.dart';
-import 'package:carros/model/user.dart';
+import 'package:carros/utils/nav.dart';
 import 'package:carros/pages/home_page.dart';
 import 'package:carros/widgets/app_button.dart';
 import 'package:carros/widgets/app_textfield.dart';
@@ -81,18 +81,16 @@ class _LoginPageState extends State<LoginPage> {
     if (!_formKey.currentState.validate()) {
       return;
     }
+    setState(() {
+      showProgress = true;
+    });
 
     String _login = loginController.text;
     String _senha = senhaController.text;
 
     ApiResponse response = await LoginAPI.login(_login, _senha);
     if (response.ok) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (BuildContext context) => HomePage(),
-        ),
-      );
+      push(context, HomePage(), replacement: true);
     } else {
       showDialog(
         context: context,
@@ -110,6 +108,9 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     }
+    setState(() {
+      showProgress = false;
+    });
   }
 
   String _validateLogin(String text) {
