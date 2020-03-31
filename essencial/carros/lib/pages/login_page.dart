@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:carros/api/login_api.dart';
 import 'package:carros/api/response_api.dart';
 import 'package:carros/model/user.dart';
@@ -15,6 +17,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
+
+  final _streamController = StreamController<bool>();
 
   final loginController = TextEditingController();
 
@@ -76,11 +80,15 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 20,
             ),
-            AppButton(
-              "Entrar",
-              _onClickLogin,
-              showProgress: showProgress,
-            )
+            StreamBuilder<Object>(
+                stream: _streamController.stream,
+                builder: (context, snapshot) {
+                  return AppButton(
+                    "Entrar",
+                    _onClickLogin,
+                    showProgress: snapshot.data ?? false,
+                  );
+                })
           ],
         ),
       ),
@@ -91,9 +99,7 @@ class _LoginPageState extends State<LoginPage> {
     if (!_formKey.currentState.validate()) {
       return;
     }
-    setState(() {
-      showProgress = true;
-    });
+    _streamController.add(true);
 
     String _login = loginController.text;
     String _senha = senhaController.text;
@@ -118,9 +124,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     }
-    setState(() {
-      showProgress = false;
-    });
+    _streamController.add(false);
   }
 
   String _validateLogin(String text) {
@@ -138,5 +142,11 @@ class _LoginPageState extends State<LoginPage> {
       return "Minimo 3 caracteres";
     }
     return null;
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _streamController.close();
   }
 }

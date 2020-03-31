@@ -35,7 +35,6 @@ class DrawerList extends StatelessWidget {
               subtitle: Text("Subtitulo fav"),
               trailing: Icon(Icons.arrow_forward),
               onTap: () {
-                print("ok");
                 Navigator.pop(context);
               },
             ),
@@ -46,7 +45,6 @@ class DrawerList extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward),
               onTap: () {
                 Navigator.pop(context);
-                print("Apagar");
               },
             ),
             ListTile(
@@ -56,7 +54,6 @@ class DrawerList extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward),
               onTap: () {
                 Navigator.pop(context);
-                print("Bandeira");
               },
             ),
             ListTile(
@@ -66,7 +63,6 @@ class DrawerList extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward),
               onTap: () {
                 _onClickLogout(context);
-                print("Bandeira");
               },
             ),
           ],

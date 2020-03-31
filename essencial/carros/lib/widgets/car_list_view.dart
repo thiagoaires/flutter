@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:carros/api/carros_api.dart';
 import 'package:carros/model/car.dart';
 import 'package:carros/pages/car_page.dart';
@@ -15,7 +17,9 @@ class CarListView extends StatefulWidget {
 
 class _CarListViewState extends State<CarListView>
     with AutomaticKeepAliveClientMixin<CarListView> {
-  List<Car> listCarros;
+  List<Car> carros;
+
+  final _streamController = StreamController<List<Car>>();
 
   @override
   bool get wantKeepAlive => true;
@@ -23,13 +27,7 @@ class _CarListViewState extends State<CarListView>
   @override
   void initState() {
     super.initState();
-
-    Future<List<Car>> futureCarros = CarrosApi.getCarros(widget.tipo);
-    futureCarros.then((carros) {
-      setState(() {
-        listCarros = carros;
-      });
-    });
+    _loadCarros();
   }
 
   @override
@@ -38,13 +36,31 @@ class _CarListViewState extends State<CarListView>
     return _body();
   }
 
+  _loadCarros() async {
+    List<Car> carros = await CarrosApi.getCarros(widget.tipo);
+    _streamController.add(carros);
+  }
+
   Widget _body() {
-    if (listCarros == null) {
-      return Center(
-        child: CircularProgressIndicator(),
-      );
-    }
-    return _listView(listCarros);
+    return StreamBuilder(
+      stream: _streamController.stream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.hasError) {
+          return Center(
+            child: Text("Erro na requisicão"),
+          );
+        }
+
+        if (!snapshot.hasData)
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+
+        List<Car> listCarros = snapshot.data;
+
+        return _listView(listCarros);
+      },
+    );
   }
 
   ListView _listView(List<Car> listCarros) {
@@ -96,5 +112,11 @@ class _CarListViewState extends State<CarListView>
             ),
           );
         });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _streamController.close();
   }
 }
