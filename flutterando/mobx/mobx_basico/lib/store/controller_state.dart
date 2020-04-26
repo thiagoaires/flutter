@@ -9,6 +9,7 @@ abstract class _ControllerState with Store {
   var client = ClientBase();
 
   String validaNome() {
+
     if (client.nome == null || client.nome.isEmpty) {
       return "Campo invalido";
     }
