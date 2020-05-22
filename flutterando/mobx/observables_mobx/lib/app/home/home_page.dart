@@ -54,16 +54,19 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Observer(builder: (_) {
-        return ListView.builder(
-            itemCount: controller.listFilteredItem.length,
-            itemBuilder: (_, index) {
-              final currentItem = controller.listFilteredItem[index];
-              return ItemWidget(
-                  item: currentItem,
-                  removeClicked: () {
-                    controller.removeItem(currentItem);
-                  });
-            });
+        return GridView.builder(
+          itemCount: controller.listFilteredItem.length,
+          itemBuilder: (_, index) {
+            final currentItem = controller.listFilteredItem[index];
+            return ItemWidget(
+                item: currentItem,
+                removeClicked: () {
+                  controller.removeItem(currentItem);
+                });
+          },
+          gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        );
       }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
