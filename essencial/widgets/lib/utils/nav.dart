@@ -9,4 +9,4 @@ Future<String> push(BuildContext context, Widget page) {
   );
 }
 
-bool pop(BuildContext context, String texto) => Navigator.pop(context, texto);
+void pop(BuildContext context, String texto) => Navigator.pop(context, texto);
