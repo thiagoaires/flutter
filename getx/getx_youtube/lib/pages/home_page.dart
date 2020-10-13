@@ -14,10 +14,10 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(),
         //body: Center(child: Text(_.counter.toString())),
         body: HomeList(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => _.increment(),
-          child: Icon(Icons.add),
-        ),
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () => _.increment(),
+        //   child: Icon(Icons.add),
+        // ),
       ),
     );
   }

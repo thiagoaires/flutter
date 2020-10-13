@@ -1,6 +1,7 @@
-import 'package:get/state_manager.dart';
+import 'package:get/get.dart';
 import 'package:getx_youtube/api/users_api.dart';
 import 'package:getx_youtube/models/user_model.dart';
+import 'package:getx_youtube/pages/profile_page.dart';
 
 class HomeController extends GetxController {
   int _counter = 0;
@@ -32,8 +33,10 @@ class HomeController extends GetxController {
     update(['users']);
   }
 
-  void increment() {
-    _counter++;
-    update();
+  showUserProfile({UserModel user}) {
+    Get.to(
+      ProfilePage(),
+      arguments: user,
+    );
   }
 }

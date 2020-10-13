@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:getx_youtube/pages/home_page.dart';
 import 'package:getx_youtube/pages/splash_page.dart';
 
 void main() {
